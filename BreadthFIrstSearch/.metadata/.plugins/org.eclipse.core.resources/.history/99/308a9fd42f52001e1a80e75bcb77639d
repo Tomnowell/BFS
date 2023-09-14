@@ -1,0 +1,18 @@
+/**
+ * 
+ */
+
+/**
+ * @author tom
+ *
+ */
+public class Expand implements Iterable<Node>{
+
+	/**
+	 * 
+	 */
+	public Expand() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+
+/**
+ * 
+ */
+
+/**
+ * @author tom
+ *
+ */
+public class BreadthFirstSearch {
+
+	/**
+	 * @param args
+	 */
+	
+	ArrayList<State> reached = new ArrayList<State>();
+	
+	public static void main(String[] args) {
+		// set initial state dirtLeft = true, dirtRight = true and position is left
+		
+		BreadthFirstSearch bfs = new BreadthFirstSearch(); 
+		Problem problem = new Problem();
+		
+		this.reached.add(problem.initialState);
+
+	}
+
+}

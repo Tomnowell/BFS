@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+
+/**
+ * 
+ */
+
+/**
+ * @author tom
+ *
+ */
+public class Problem {
+	
+	// set initial state dirtLeft = true, dirtRight = true and position is left
+	State initialState = new State(true, true, 'L');
+	
+	// Define goal state
+	public static boolean isGoalState(State state) {
+		if (state.dirtLeft == false && state.dirtRight == false) {
+			return true;
+		}
+		return false;
+	}
+	
+
+}

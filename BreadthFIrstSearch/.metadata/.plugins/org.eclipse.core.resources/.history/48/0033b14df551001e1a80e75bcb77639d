@@ -1,0 +1,47 @@
+/**
+ * 
+ */
+
+/**
+ * @author tom
+ *
+ */
+public class Node {
+
+	/**
+	 * @param args
+	 */
+	
+	/*	state the state to which the node corresponds;
+	parent: 	the node in the tree that generated this node
+	action: 	the action that was applied to the parent’s state 
+				to generate this node;
+	pathCost: 	the total cost of the path from the initial state to 
+				this node */
+
+	int state = 0;
+	Node parent = new Node();
+	int action = 0;
+	int pathCost = 0;
+	
+	
+	public Node(Node parent) {
+		
+		/**
+		 * Constructor for Node with parent
+		 */
+		
+	}
+	
+	public setParent(Node node) {
+		this.parent = node;
+	}
+	
+		
+		
+		
+		
+
+
+
+}

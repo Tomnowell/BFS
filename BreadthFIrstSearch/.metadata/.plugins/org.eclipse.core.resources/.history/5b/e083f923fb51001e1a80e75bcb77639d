@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+
+/**
+ * 
+ */
+
+/**
+ * @author tom
+ *
+ */
+public class BreadthFirstSearch {
+
+	/**
+	 * @param args
+	 */
+	
+	ArrayList<State> reached = new ArrayList<State>();
+	
+	public static void main(String[] args) {
+		// set initial state
+		initialState = new State(true, true, 'L');
+		this.reached.add()
+
+	}
+
+}

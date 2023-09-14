@@ -1,0 +1,34 @@
+/**
+ * 
+ */
+
+/**
+ * @author tom
+ *
+ */
+public class State {
+	boolean dirtLeft;
+	boolean dirtRight;
+	char position;
+	
+	public void suck() {
+		if (this.position == 'R') {
+			this.dirtRight = false;
+		} else {
+			this.dirtLeft = false;
+		}
+	}
+	
+	public void goLeft() {
+		this.position = 'L';
+	}
+	
+	public void goRight() {
+		this.position = 'R';
+	}
+	
+		
+		
+	
+	
+}

@@ -1,0 +1,35 @@
+import java.util.ArrayList;
+
+/**
+ * 
+ */
+
+/**
+ * @author tom
+ *
+ */
+public class BreadthFirstSearch {
+
+	/**
+	 * @param args
+	 */
+	Problem problem = new Problem();
+	
+	public BreadthFirstSearch(Problem problem) {
+		this.problem = problem
+	}
+	
+	ArrayList<State> reached = new ArrayList<State>();
+	
+	public void search () {
+		
+		
+		this.reached.add(this.problem.initialState);
+		
+		
+
+	}
+	
+	
+
+}

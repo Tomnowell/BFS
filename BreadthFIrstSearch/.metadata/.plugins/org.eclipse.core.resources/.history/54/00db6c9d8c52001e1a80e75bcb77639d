@@ -1,0 +1,56 @@
+/**
+ * 
+ */
+
+/**
+ * @author tom
+ *
+ */
+public class State {
+	
+	boolean dirtLeft;
+	boolean dirtRight;
+	char position;
+	
+	public State(boolean dirtLeft, boolean dirtRight, char position) {
+		this.dirtLeft = dirtLeft;
+		this.dirtRight = dirtRight;
+		this.position = position;
+		
+	}
+	
+	/*	Implement the transition model return a new state
+	*	based on the current state and the action performed.	
+	*/
+	public State suck() {
+		if (this.position == 'R') {
+			return new State(this.dirtLeft, false, 'R');
+		} else {
+			return new State(false, this.dirtRight, 'L');
+		}
+	}
+	
+	/*	Implement the move transition model return a new state
+	*	based on the current state and the action performed.	
+	*/
+	public State goLeft() {
+		return new State(this.dirtLeft, this.dirtRight, 'L');
+	}
+	
+	public State goRight() {
+		return new State(this.dirtLeft, this.dirtRight, 'R');
+	}
+	
+	public void setDirtLeft() {
+		this.dirtLeft = true;
+	}
+	
+	public void setDirtRight() {
+		this.dirtRight = true;
+	}
+	
+		
+		
+	
+	
+}

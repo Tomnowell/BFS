@@ -1,0 +1,27 @@
+package iterator;
+
+import java.util.Collection;
+import java.util.Iterator;
+
+/**
+ * @author tom
+ *
+ */
+public class Expand implements Iterable<Node>{
+
+	/**
+	 * 
+	 */
+	 
+	@Override
+	public Iterator<Node> iterator()
+	{
+		 // make sure this returns e.g. Collections.unmodifiableList
+	    Collection<Node> nodes = computeAllNodes(); 
+	    return nodes.iterator();	
+	}
+	public Expand() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

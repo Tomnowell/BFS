@@ -1,0 +1,49 @@
+import java.util.Stack;
+
+/**
+ * 
+ */
+
+/**
+ * @author tom
+ *
+ */
+public class BreadthFirstSearch {
+
+	/**
+	 * @param args
+	 */
+	Problem problem;
+	Stack<Node> reached = new Stack<Node>();
+	Node startNode;
+	Frontier frontier;
+	public BreadthFirstSearch(Problem problem) {
+		this.problem = problem;
+		startNode = new Node(null, this.problem.initialState, 1);
+		frontier.add(startNode);
+	}
+	
+
+	public Node search() {
+		if (problem.isGoalState(startNode.getState())) {
+			return this.startNode;
+		}
+		this.reached.push(startNode);
+		while frontier.isEmpty() == false {
+			
+		
+		}
+		
+		
+		
+		
+		
+		return new Node(null, null, 0, 'Error');
+		
+		
+		
+		
+
+	}
+	
+}

@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+
+/**
+ * @author tom
+ *
+ */
+public class Problem {
+	State initialState = new State(true, true, 'L');
+	
+	ArrayList<state> stateSpace = new ArrayList<state>();
+	this.stateSpace.add(initialState);
+	
+	
+
+}
