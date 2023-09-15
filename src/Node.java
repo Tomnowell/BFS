@@ -9,7 +9,7 @@ public class Node {
 	 	state the state to which the node corresponds;
 	parent: 	the node in the tree that generated this node
 	action: 	the action that was applied to the parent’s state
-				to generate this node;
+				to generate this node; Unused
 	pathCost: 	the total cost of the path from the initial state to
 				this node */
 

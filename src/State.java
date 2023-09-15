@@ -44,7 +44,7 @@ public class State extends Object{
     /*  Overrides   *********************************************************/
     @Override
     public String toString(){
-        return "Left: " + this.dirtLeft + " Right: " + this.dirtRight + "   Position: " + this.position;
+        return "L<>R " + this.dirtLeft + " <-> " + this.dirtRight + "   Position: " + this.position;
     }
 
 
