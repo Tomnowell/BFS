@@ -22,13 +22,11 @@ public class Node {
     public Node(){
         this.setState(null);
         this.setParent(null);
-        this.setAction(null);
         this.pathCost = 0;
     }
     public Node(State state, int pathCost) {
-
         /*
-         * Constructor for Node with no parent and no action
+         * Constructor for Node with no parent
          */
         this.setParent(null);
         this.setState(state);
@@ -37,8 +35,6 @@ public class Node {
 
 
     public Node(Node parent, State state, int pathCost) {
-
-        /*  Constructor for Node with parent no action  */
         this.setParent(parent);
         this.setState(state);
         this.addPathCost(pathCost);
@@ -63,13 +59,11 @@ public class Node {
     /*  Overrides   *********************************************************/
      @Override
      public String toString(){
-         if (this.parent != null) return "Parent : null" + "  State :" +
-                 this.state + " Action :" + this.action +
-                 "  Path Cost: " + this.pathCost;
-         else if (this.state != null) return "Parent : null" + "  State :" +
-                 this.state + " Action :" + this.action +
-                 "  Path Cost: " + this.pathCost;
-         else return "Parent : null" + "  State : null" + " Action :"
-                     + this.action + "  Path Cost: " + this.pathCost;
+         if (this.parent != null) return "<- Parent - " + "Action: Expand" + " |  State : " +
+                 this.state + " | Path Cost: " + this.pathCost;
+         else if (this.state != null) return "Root" + " |  State : " +
+                 this.state + " | Path Cost: " + this.pathCost;
+         else return "Something strange is going on...";
+
      }
 }

@@ -54,10 +54,9 @@ public class BreadthFirstSearch {
         ArrayList<State> possibleStates = Problem.actions(state);
 
         possibleStates.forEach(possible -> {
-            System.out.println(possible);
             if (!reached.contains(possible)) {
                 reached.add(possible);
-                Node newNode = new Node(node.parent, possible, 1);
+                Node newNode = new Node(node, possible, 1);
                 System.out.println("New node : " + newNode);
                 yield.add(newNode);
 
