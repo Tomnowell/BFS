@@ -1,40 +1,34 @@
-package BFS;
 /**
  * @author tom
- *
+ *  Keep track of the state of each node
  */
-public class State {
-    /*
-     *	Instance Variables
-     */
+public class State extends Object{
+    /*  Instance Variables  *************************************************/
     boolean dirtLeft;
     boolean dirtRight;
     char position;
 
-    /*
-     *	Constructors
-     */
+    /*  Constructors    *****************************************************/
     public State(boolean dirtLeft, boolean dirtRight, char position) {
         this.dirtLeft = dirtLeft;
         this.dirtRight = dirtRight;
         this.position = position;
     }
 
-    /*
-     *	Getters
-     */
+    /*  Getters *************************************************************/
     public boolean isDirtLeft() {
         return dirtLeft;
     }
+
     public boolean isDirtRight() {
         return dirtRight;
     }
+
     public char getPosition() {
         return position;
     }
-    /*
-     *	Setters
-     */
+
+    /*  Setters *************************************************************/
     public void setDirtLeft(boolean dirtLeft) {
         this.dirtLeft = dirtLeft;
     }
@@ -47,23 +41,16 @@ public class State {
         this.position = position;
     }
 
-    // Do this in the Problem class transition model
-    public State suck() {
-        if (this.position == 'R') {
-            return new State(this.dirtLeft, false, 'R');
-        } else {
-            return new State(false, this.dirtRight, 'L');
-        }
+    /*  Overrides   *********************************************************/
+    @Override
+    public String toString(){
+        return "Left: " + this.dirtLeft + " Right: " + this.dirtRight + "   Position: " + this.position;
     }
 
-    /*	Implement the move action transition model return a new state
-     *	based on the current state and the action performed.
-     */
-    public State goLeft() {
-        return new State(this.dirtLeft, this.dirtRight, 'L');
-    }
 
-    public State goRight() {
-        return new State(this.dirtLeft, this.dirtRight, 'R');
+    public boolean equals(State state){
+        return this.dirtLeft == state.isDirtLeft() &&
+                this.dirtRight == state.isDirtRight() &&
+                this.position == state.getPosition();
     }
 }

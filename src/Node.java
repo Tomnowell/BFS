@@ -1,7 +1,6 @@
-package BFS; /**
  /**
  * @author tom
- *
+ *  Define a node in the tree
  */
 public class Node {
 
@@ -31,27 +30,17 @@ public class Node {
         /*
          * Constructor for Node with no parent and no action
          */
+        this.setParent(null);
         this.setState(state);
         this.addPathCost(pathCost);
     }
+
+
     public Node(Node parent, State state, int pathCost) {
 
-        /**
-         * Constructor for Node with parent no action
-         */
+        /*  Constructor for Node with parent no action  */
         this.setParent(parent);
         this.setState(state);
-        this.addPathCost(pathCost);
-    }
-
-    public Node(Node parent, State state, String action, int pathCost) {
-
-        /*
-         * Constructor for Node with parent no action
-         */
-        this.setParent(parent);
-        this.setState(state);
-        this.setAction(action);
         this.addPathCost(pathCost);
     }
     public void setParent(Node node) {
@@ -70,4 +59,17 @@ public class Node {
     public State getState() {
         return this.state;
     }
+
+    /*  Overrides   *********************************************************/
+     @Override
+     public String toString(){
+         if (this.parent != null) return "Parent : null" + "  State :" +
+                 this.state + " Action :" + this.action +
+                 "  Path Cost: " + this.pathCost;
+         else if (this.state != null) return "Parent : null" + "  State :" +
+                 this.state + " Action :" + this.action +
+                 "  Path Cost: " + this.pathCost;
+         else return "Parent : null" + "  State : null" + " Action :"
+                     + this.action + "  Path Cost: " + this.pathCost;
+     }
 }

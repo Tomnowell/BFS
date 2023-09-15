@@ -1,10 +1,8 @@
-package BFS;
-
 import java.util.LinkedList;
 
 /**
  * @author tom
- *
+ *  Delineates the explored from unexplored parts of the tree
  */
 public class Frontier<Node> extends LinkedList<Node> {
 
